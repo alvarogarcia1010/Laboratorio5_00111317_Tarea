@@ -1,14 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".Fragments.PokemonDetailsFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Fragmento en blanco"/>
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-</FrameLayout>
+        <ImageView
+                android:id="@+id/image_main_content_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+        />
+
+        <TextView
+                android:id="@+id/pokemon_name_main_content_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/image_main_content_fragment"
+                android:layout_alignRight="@id/image_main_content_fragment"
+                android:layout_alignBottom="@id/image_main_content_fragment"
+                android:layout_margin="16dp"
+
+                android:background="#65000000"
+                android:gravity="end"
+
+                android:lines="1"
+                android:padding="8dp"
+
+                android:text="@string/n_a_value"
+                android:textColor="#fff"
+                android:textSize="35sp" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginTop="8dp">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+            >
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/weight"
+                        android:textSize="@dimen/font_details_size"
+                        android:textStyle="bold"
+                />
+
+                <TextView
+                        android:id="@+id/weight_main_content_fragment"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/n_a_value"
+                        android:textSize="@dimen/font_details_size"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+            >
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/height"
+                        android:textSize="@dimen/font_details_size"
+                        android:textStyle="bold"
+                />
+
+                <TextView
+                        android:id="@+id/height_main_content_fragment"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/n_a_value"
+                        android:textSize="@dimen/font_details_size"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+            >
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/type_1"
+                        android:textSize="@dimen/font_details_size"
+                        android:textStyle="bold"
+                />
+
+                <TextView
+                        android:id="@+id/type_1_main_content_fragment"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/n_a_value"
+                        android:textSize="@dimen/font_details_size"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+            >
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/type_2"
+                        android:textSize="@dimen/font_details_size"
+                        android:textStyle="bold"
+                />
+
+                <TextView
+                        android:id="@+id/type_2_main_content_fragment"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/n_a_value"
+                        android:textSize="@dimen/font_details_size"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

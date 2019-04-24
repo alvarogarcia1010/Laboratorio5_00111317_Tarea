@@ -1,5 +1,6 @@
 package com.example.fragment.Activities
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
@@ -67,9 +68,11 @@ class MainActivity : AppCompatActivity(), PokemonsListFragment.ListenerTools{
     override fun managePortraitItemClick(item: Pokemon) {
         //val pokemonBundle = Bundle()
         //pokemonBundle.putParcelable("MOVIE", pokemon)
-        Toast.makeText(this@MainActivity, "Click en Portrait", Toast.LENGTH_LONG).show()
-
         //startActivity(Intent(this, MovieViewerActivity::class.java).putExtras(movieBundle))
+
+        Toast.makeText(this@MainActivity, "Click en Portrait", Toast.LENGTH_LONG).show()
+        startActivity(Intent(this, PokemonViewer::class.java).putExtra("URL", item.url))
+
     }
 
     private fun changeFragment(id: Int, frag: Fragment){ supportFragmentManager.beginTransaction().replace(id, frag).commit() }
@@ -105,13 +108,25 @@ class MainActivity : AppCompatActivity(), PokemonsListFragment.ListenerTools{
                 val results = root.getJSONArray("results")
                 MutableList(20) { i ->
                     val result = JSONObject(results[i].toString())
-                    Pokemon(
+                    Pokemon(i,
                         result.getString("name").capitalize(),
-                        result.getString("url"))
+                        result.getString("url"),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString())
                 }
             } else {
-                MutableList(20) {
-                    Pokemon(R.string.n_a_value.toString(), R.string.n_a_value.toString())
+                MutableList(20) {i->
+                    Pokemon(i,
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString())
                 }
             }
 
@@ -147,13 +162,25 @@ class MainActivity : AppCompatActivity(), PokemonsListFragment.ListenerTools{
                     val resulty = JSONObject(results[i].toString())
                     val result = JSONObject(resulty.getString("pokemon"))
 
-                    Pokemon(
+                    Pokemon(i,
                         result.getString("name").capitalize(),
-                        result.getString("url"))
+                        result.getString("url"),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString())
                 }
             } else {
-                MutableList(20) {
-                    Pokemon(R.string.n_a_value.toString(), R.string.n_a_value.toString())
+                MutableList(20) {i ->
+                    Pokemon(i,
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString(),
+                        R.string.n_a_value.toString())
                 }
             }
             for (pokemon in pokemons) {

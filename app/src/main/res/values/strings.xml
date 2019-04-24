@@ -3,4 +3,8 @@
     <string name="search_pokemon">Search Pokemon</string>
     <string name="search">Search</string>
     <string name="n_a_value">N/A</string>
+    <string name="weight">Weight:</string>
+    <string name="height">Height:</string>
+    <string name="type_2">Tipo 2:</string>
+    <string name="type_1">Tipo 1:</string>
 </resources>

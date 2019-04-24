@@ -2,4 +2,5 @@
 <resources>
     <dimen name="image_size">96dp</dimen>
     <dimen name="margin_image">16dp</dimen>
+    <dimen name="font_details_size">20sp</dimen>
 </resources>

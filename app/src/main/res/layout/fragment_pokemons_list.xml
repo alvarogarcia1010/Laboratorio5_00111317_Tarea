@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-        android:id="@+id/main_ll"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main_ll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical"
-        tools:context=".Activities.MainActivity">
+        tools:context=".Activities.MainActivity" android:orientation="vertical">
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -21,7 +20,7 @@
                 android:layout_width="0dp"
                 android:hint="@string/search_pokemon"
                 android:layout_height="wrap_content"
-                android:layout_weight="3" />
+                android:layout_weight="3"/>
 
         <Button
                 android:id="@+id/btn_search_pokemon"
@@ -37,6 +36,6 @@
             android:id="@+id/rv_pokemon_list"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="8" />
+            android:layout_weight="8"/>
 
 </LinearLayout>
