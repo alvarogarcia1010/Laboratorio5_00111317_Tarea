@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.fragment.Adapters.AdapterManagement
 import com.example.fragment.Adapters.PokedexAdapter
+import com.example.fragment.Adapters.PokedexSimpleAdapter
 import com.example.fragment.Models.Pokemon
 
 import com.example.fragment.R
@@ -56,12 +57,15 @@ class PokemonsListFragment : Fragment() {
 
         if(orientation == Configuration.ORIENTATION_PORTRAIT){
             PokedexAdapter = PokedexAdapter(pokemonList, { item:Pokemon -> listenerTools?.managePortraitItemClick(item)})
+            container.rv_pokemon_list.adapter = PokedexAdapter as PokedexAdapter
+
         }
         if(orientation == Configuration.ORIENTATION_LANDSCAPE){
-            PokedexAdapter = PokedexAdapter(pokemonList, {item:Pokemon->listenerTools?.manageLandscapeItemClick(item)})
+            PokedexAdapter = PokedexSimpleAdapter(pokemonList, {item:Pokemon->listenerTools?.manageLandscapeItemClick(item)})
+            container.rv_pokemon_list.adapter = PokedexAdapter as PokedexSimpleAdapter
+
         }
 
-        container.rv_pokemon_list.adapter = PokedexAdapter as PokedexAdapter
 
         container.rv_pokemon_list.apply {
             setHasFixedSize(true)
